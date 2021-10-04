@@ -6,7 +6,7 @@ class MyTestCase(unittest.TestCase):
     def test_even_odd(self):
         self.assertEqual("13 is an odd number", even_or_odd(13))
         self.assertEqual("24 is an even number", even_or_odd(24))
-
+        self.assertEqual("19 is an odd number", even_or_odd(19))
     # In the space below, write a test function for bonus. Make sure to import the appropriate information
     # at the top of this file. Make sure to write three test cases.
     def test_bonus(self):
