@@ -33,6 +33,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual("It is a tie", rock_paper_scissors.who_wins(1, 1))
 
     def test_get_card(self):
+        
 
 
 if __name__ == '__main__':
