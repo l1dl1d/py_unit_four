@@ -33,8 +33,15 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual("It is a tie", rock_paper_scissors.who_wins(1, 1))
 
     def test_get_card(self):
-        
+        card = assignment_four.get_card()
+        self.assertGreaterEqual(card, 1)
+        self.assertLessEqual(card, 10)
 
-
+    def test_get_winner(self):
+        self.assertEqual("the dealers total is 10 You Won!", assignment_four.get_winner(12, 10))
+        self.assertEqual("the dealers total is 12 the dealer won", assignment_four.get_winner(10, 12))
+        self.assertEqual("it was a tie", assignment_four.get_winner(10, 10))
+        self.assertEqual("the dealers total is 10 You Won!", assignment_four.get_winner(21, 10))
+        self.assertEqual("You went over 21. You lose", assignment_four.get_winner(22, 10))
 if __name__ == '__main__':
     unittest.main()
