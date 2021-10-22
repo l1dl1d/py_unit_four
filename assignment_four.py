@@ -1,9 +1,22 @@
+# Khalid
+# date: 10/22/21
+# The purpose of this program is to generate a black jack game to play and to interact with.
 import random
 def get_card():
+    """
+    this function draws a random card between 1 and 10
+    :return: returns the random number
+    """
     random_num = random.randint(1, 10)
     return random_num
 
 def get_winner(user_total, dealer_total):
+    """
+    this function gives the dealers total and users total then declares who won and how.
+    :param user_total: this is the users total at the moment
+    :param dealer_total: this tells the dealers total
+    :return:
+    """
     if user_total > 21:
         return "You went over 21. You lose"
     elif user_total > dealer_total:
@@ -14,6 +27,11 @@ def get_winner(user_total, dealer_total):
         return "it was a tie"
 
 def main():
+    """
+    this function is where all the text happens. it asks if you want another card and it calls all of
+    the other functions to put everything together
+    :return:
+    """
     card1 = get_card()
     card2 = get_card()
     card3 = get_card()
